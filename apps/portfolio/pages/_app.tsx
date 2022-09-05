@@ -1,14 +1,16 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import { Header } from '../components/header/header.component';
+import './styles.scss';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to portfolio!</title>
+        <title>[ batarin ]</title>
       </Head>
-      <main>
+      <Header />
+      <main className="bg-custom-black min-h-screen pt-29 text-custom-white">
         <Component {...pageProps} />
       </main>
     </>
